@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 var Header = require("./header");
+var Menu = require("./menu");
+var Screen = require("./screen");
+var Controlls = require("./controlls");
+var Footer = require("./footer");
+
 var steps =  [
   {name: "Seleccione una opción"},
   {name: "Entre dos números"},    
@@ -22,61 +28,6 @@ var DataEntry = React.createClass({
                 <Screen />
                 <Controlls />
                 <Footer />
-            </div>
-        );
-    }
-});
-/*
-var Header = React.createClass({
-    render: function(){
-        return (
-            <div>
-            {this.props.head.title} 
-            </div>
-        );
-    }
-});
-*/
-var Menu = React.createClass({
-  render: function() {
-    var stepNodes = this.props.steps.map(function(step) {
-      return (
-          step.name
-      );
-    });
-    return (
-      <div>
-        {stepNodes}
-      </div>
-    );
-  }
-});
-
-var Screen = React.createClass({
-    render: function(){
-        return (
-            <div>
-                screen
-            </div>
-        );
-    }
-});
-
-var Controlls = React.createClass({
-    render: function(){
-        return (
-            <div>
-                controls 
-            </div>
-        );
-    }
-});
-
-var Footer = React.createClass({
-    render: function(){
-        return (
-            <div>
-                footer 
             </div>
         );
     }
