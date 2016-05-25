@@ -6,7 +6,7 @@ module.exports = React.createClass({
     render: function(){
         return (
             <div>
-                footer 
+                 {this.props.obj.title}  
             </div>
         );
     }
