@@ -19,6 +19,7 @@ var pages =  [
 var head =  {title: "Data Entry"};
 var obj =  {title: "Fotter del dataentry"};
  
+var pagesArr = [Page1,Page2,Page3]
 
 var Pages = React.createClass({    
     render: function() {
@@ -51,7 +52,8 @@ var DataEntry = React.createClass({
           stepIndex: 0,
           operation: "suma",
           num1: 0,
-          num2: 0
+          num2: 0,
+          pagesArrLength: this.props.pagesArr.length
         }
     },
     getTitle : function(){
@@ -93,7 +95,12 @@ var DataEntry = React.createClass({
                     handleNum1={this.handleNum1}
                     handleNum2={this.handleNum2}
                 />
-                <Navigation handleNextClick={this.handleNextClick}  handleBackClick={this.handleBackClick} />
+                <Navigation 
+                    handleNextClick={this.handleNextClick}  
+                    handleBackClick={this.handleBackClick}
+                    pI={this.state.pageIndex}
+                    pagesArrLength={this.state.pagesArrLength}
+                />
                 <Footer obj = {this.props.obj}/>
             </div>
         );
@@ -101,6 +108,6 @@ var DataEntry = React.createClass({
 });
 
 ReactDOM.render(
-    <DataEntry pages={pages} title={head} obj={obj} />,
+    <DataEntry pages={pages} pagesArr={pagesArr} title={head} obj={obj} />,
     document.getElementById('content')
 );
