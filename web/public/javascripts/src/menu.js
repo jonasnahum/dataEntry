@@ -47,11 +47,16 @@ module.exports = React.createClass({
     },
     
     render : function (){
+        var results = this.props.pages;
+
         return (
-            <div>
-                <div> your selected step is + {this.state.selectedStep} </div>
-                <button onClick={this.onNextStep}>Next Step</button>
-            </div>
+            <ul>
+                {results.map(function(result) {
+                    return <li key={result.id}>
+            <a href="#">{result.text}</a>
+            </li>;
+                })}
+            </ul>
         );
     }
 });
