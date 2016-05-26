@@ -34,7 +34,7 @@ var Pages = React.createClass({
         
         if (this.props.pageIndex === 2 && this.props.stepIndex === 0)
         return (
-            <Page3 />
+            <Page3 op={this.props.op} num1={this.props.num1} num2={this.props.num2}/>
         );
             
         return (
