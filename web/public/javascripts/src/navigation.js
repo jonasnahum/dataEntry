@@ -14,6 +14,7 @@ module.exports = React.createClass({
             return (
                 <div>
                     <input type="button" className="btn" value="Back" onClick={this.props.handleBackClick} />
+                    <input type="button" className="btn" value="Next Step" onClick={this.props.handleNextStep} />
                 </div>
             );
 

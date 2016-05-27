@@ -50,12 +50,11 @@ module.exports = React.createClass({
         var results = this.props.pages;
 
         return (
-            <ul>
-                {results.map(function(result) {
-                    return <li key={result.id}>
-            <a href="#">{result.text}</a>
-            </li>;
-                })}
+            <ul>{
+                    results.map(function(result) {
+                        return <li ><a href="#">{result.title}</a></li>;
+                    })
+                }
             </ul>
         );
     }
